@@ -111,7 +111,7 @@ func dataSourceGoogleComputeSubnetworkRead(d *schema.ResourceData, meta interfac
 		return fmt.Errorf("Error setting internal_ipv6_prefix: %s", err)
 	}
 	if err := d.Set("external_ipv6_prefix", subnetwork.ExternalIpv6Prefix); err != nil {
-		return fmt.Errorf("Error setting internal_ipv6_prefix: %s", err)
+		return fmt.Errorf("Error setting enternal_ipv6_prefix: %s", err)
 	}
 	if err := d.Set("private_ip_google_access", subnetwork.PrivateIpGoogleAccess); err != nil {
 		return fmt.Errorf("Error setting private_ip_google_access: %s", err)
